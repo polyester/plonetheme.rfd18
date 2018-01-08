@@ -18,6 +18,39 @@
 //** Text color of current page in the breadcrumb
 @plone-breadcrumb-active-color:       @2018-pink;
 
+h1,h2,h3{font-family: "lovelo"}
+@plone-link-color: @2018-pink;
+@plone-link-color-on-dark: @2018-pink;
+
+.font-face(
+    @font-path:     'lovelo/';
+	@file-name:     'lovelo_black';
+	@font-family:   'lovelo';
+	@font-weight:   normal;
+	@font-style:    normal;
+	@svg-id:        'loveloblack';
+    @local:         ~"local('Lovelo Black'),";
+);
+
+.font-face(
+    @font-path:     'lovelo/';
+	@file-name:     'lovelo_line_light';
+	@font-family:   'lovelo-line';
+	@font-weight:   300;
+	@font-style:    normal;
+	@svg-id:        'loveloline_light';
+    @local:         ~"local('Lovelo Line Light'),";
+);
+.font-face(
+    @font-path:     'lovelo/';
+	@file-name:     'lovelo_line_bold';
+	@font-family:   'lovelo-line';
+	@font-weight:   700;
+	@font-style:    normal;
+	@svg-id:        'loveloline_bold';
+    @local:         ~"local('Lovelo Line Bold'),";
+);
+
 .mce-edit-focus {
     color: #000;
 }
