@@ -1,5 +1,29 @@
 /* our custom styles */
 
+@2018-lightgreen:      #00A28D;
+@2018-darkgreen:        #007881;
+@2018-pink:             #c563a2;
+@2018-grey:             #eee;
+@2018-darkgrey:     #272725;
+@2018-darkest:      #171715;
+@2018-gradient:         linear-gradient(70deg, @2018-lightgreen,@2018-darkgreen);
+
+@plone-body-bg:            @2018-darkgrey;
+@plone-text-color:    white;
+@plone-text-discreet: lighten(@2018-darkgreen,5%);
+
+@plone-sitenav-link-hover-bg: @2018-pink;
+@plone-breadcrumb-bg: @2018-darkgrey;
+@plone-breadcrumb-color:              @2018-darkgreen;
+//** Text color of current page in the breadcrumb
+@plone-breadcrumb-active-color:       @2018-pink;
+
+.mce-edit-focus {
+    color: #000;
+}
+div.container label {color: #000}
+.plone-modal-content  {color: #000}
+
 form#searchGadget_form.pat-livesearch{
     max-width: 200px;
     min-width: 200px;
@@ -69,7 +93,7 @@ p.callout img.image-right {
 }
 .plone-navbar {
   .clearfix();
-  background-color: @plone-gray-lighter;
+  background-color: @2018-darkgreen;
   position: relative;
   min-height: @plone-sitenav-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: @plone-sitenav-margin-bottom;
@@ -129,8 +153,8 @@ p.callout img.image-right {
 
 #portal-footer-wrapper {
   padding: 30px 15px;
-  background-color: @plone-gray-lighter;
   color: @plone-text-color;
+  background-color: @2018-darkest;
   text-align: center;
   clear: both;
   p {
@@ -331,3 +355,5 @@ div.isotope-image > img {
         }
     }
 }
+
+
