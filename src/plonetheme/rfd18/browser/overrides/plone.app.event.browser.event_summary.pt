@@ -12,6 +12,7 @@
                      toLocalizedTime nocall:context/@@plone/toLocalizedTime
                      ">
 
+<div tal:attributes="class data/title">
   <ul class="event summary details" summary="Event details" i18n:attributes="summary summary_event_details">
 
     <tal:cond condition="python:'title' not in excludes">
@@ -28,15 +29,15 @@
 </strong>
 </li>
    <tal:cond condition="context/type_voorstelling">
-      <li class="event-location">
+      <li class="event-type">
         <strong><span class="icon-view"></span>
-        <span itemprop="location" tal:content="structure python: context.type_voorstelling">Type Voorstelling</span></strong>
+        <span itemprop="location"  tal:content="structure python: context.type_voorstelling">Type Voorstelling</span></strong>
       </li>
     </tal:cond>
    <tal:cond condition="context/route">
       <li class="event-location">
-        <strong><span class="icon-controlpanel-FilterSettings"></span>
-        <span itemprop="location" tal:content="structure python: context.route">Route</span></strong>
+        <strong>
+        <span tal:repeat="item context/route"><span class="icon-controlpanel-FilterSettings"></span><span tal:content="item"/><br /></span></strong>
       </li>
     </tal:cond>
     <tal:cond condition="python:'occurrences' not in excludes">
@@ -137,7 +138,7 @@
     </tal:cond>
 
   </ul>
-
+</div>
 </tal:def>
 
 </body>
