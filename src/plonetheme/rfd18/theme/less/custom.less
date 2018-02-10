@@ -249,7 +249,7 @@ p.callout img.image-right {
   padding: 30px 15px;
   color: @plone-text-color;
   background-color: @2018-darkest;
-  text-align: center;
+  text-align: left;
   clear: both;
   p {
     border-bottom: none;
@@ -355,6 +355,13 @@ margin-left: 24em;
     clear: both;
     width: 100%;
 }
+#isotope-filters label {
+    color: white;
+    margin-right: 1em;
+}
+.isotope.item h2 {
+    display: inline;
+}
 div.isotope-image{
     width: 100%;
     padding-top: 56.25%;
@@ -377,7 +384,23 @@ div.isotope-image > img {
 #isotope-grid {
     position: relative;
 }
-#isotope-grid h2{font-size: 20px;}
+#isotope-grid h2{
+    font-size: 1.8em;
+    position: absolute;
+    top: 0.2em;
+    left: 1em;
+    color: white;
+    background: rgba(0,0,0,.5);
+    margin-right: 0.5em;
+}
+.isotope-time {
+    position: relative;
+    top: 0em;
+    color: white;
+    background: none;
+    font-size: 1.2em;
+    font-weight: 700;
+}
 #isotope-grid .vertical {
     padding: 0 1em;
     width: 100%;
@@ -405,11 +428,11 @@ div.isotope-image > img {
 }
 @media (min-width: 1200px) {
 #isotope-grid .horizontal {
-    width: 30%;
+    width: 47%;
 }
 }
 @media (max-width: 670px){
-    .rfd-headertext, .pagination {
+    .rfd-headertext {
     display: none;
     }
     .documentFirstHeading {
@@ -433,6 +456,18 @@ div.isotope-image > img {
   margin-left: 3px;
   margin-top: 6em;
   white-space: nowrap;
+}
+.isotope-time {
+    font-size: 1em;
+    position: relative;
+    top: 0em;
+    background: none;
+}
+#isotope-grid h2 {
+    font-size: 1.2em;
+}
+.event.summary {
+    margin-bottom: 0em;
 }
 }
 

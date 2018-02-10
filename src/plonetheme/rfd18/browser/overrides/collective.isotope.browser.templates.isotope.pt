@@ -98,16 +98,13 @@ $(window).load(function(evt) {
                                          toLocalizedTime nocall:context/@@plone/toLocalizedTime;
                                          ">
                 <article class="isotope-item" tal:attributes="class string:isotope-item $layout_class $filter_class">
-                  <a href="" tal:attributes="href item_link;
-                                             class item_wf_state_class">
-                    <h2 tal:content="item/Title">[title]</h2>
-                  </a>
+                  
                   <tal:image tal:condition="item_has_image">
                     <a tal:attributes="href item_link">
                       <div class="isotope-image"
                            tal:define="obj item/getObject">
                           <img tal:define="scales obj/@@images;
-                                           scale python:scales.scale('image', 'preview')"
+                                           scale python:scales.scale('image', 'large')"
                               tal:replace="structure python:scale and scale.tag(css_class='isotope-image') or None" />
                       </div>
                     </a>
@@ -117,7 +114,11 @@ $(window).load(function(evt) {
                       <p class="discreet" tal:content="item/Description">[description]</p>
                     </a>
                   </tal:no-image>
-                <p><span tal:replace="python:here.toLocalizedTime(item_start, True)"> </span></p>               <p class="discreet" tal:content="item/Description">[description]</p>
+                  <a href="" tal:attributes="href item_link;
+                                             class item_wf_state_class">
+                    <h2 tal:content="item/Title">[title]</h2>
+                  </a>
+                <p class="isotope-time"><span tal:replace="python:here.toLocalizedTime(item_start, True)"> </span></p>               <p class="isotope-description" tal:content="item/Description">[description]</p>
                 </article>
             </tal:definitions>
           </tal:repeat>
